@@ -8,7 +8,7 @@ import cors from "cors";
 
 config();
 
-const whitelistlist = ["http://localhost:3000"];
+const whitelistlist = ["http://localhost:3000", process.env.CLIENT_URL];
 const PORT = process.env.PORT || 5000;
 
 const app = express();
