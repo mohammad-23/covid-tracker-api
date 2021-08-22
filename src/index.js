@@ -1,9 +1,12 @@
+/* eslint-disable no-console */
+import "@babel/polyfill/noConflict";
+
 import express from "express";
 import axios from "axios";
-import dotenv from "dotenv";
+import { config } from "dotenv";
 import cors from "cors";
 
-dotenv.config();
+config();
 
 const whitelistlist = ["http://localhost:3000"];
 const app = express();
