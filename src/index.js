@@ -9,6 +9,8 @@ import cors from "cors";
 config();
 
 const whitelistlist = ["http://localhost:3000"];
+const PORT = process.env.PORT || 5000;
+
 const app = express();
 
 app.use(express.json());
@@ -53,6 +55,6 @@ app.get("/api/tracker", async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("Server running on port 5000");
 });
